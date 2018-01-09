@@ -1,0 +1,104 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>OpenTok Proctoring demo - Student</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link href="/css/student.css" rel="stylesheet" type="text/css">
+    <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fbjkpogjjhklbffmfooofjgablhmcnhn">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="/student.html">Student</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/proctor.html">Join as proctor</a>
+                </li>
+                </ul>
+                <a href="/" class="btn btn-outline-secondary">Exit</a>
+            </div>
+        </nav>
+        <div class="row">
+            <div class="col">
+                <div id="message" class="alert alert-primary" role="alert">Offline</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-3 setup-panel">
+                <form>
+                    <h2>Video source</h2>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="videoType" id="videoType-camera" value="camera" checked>
+                                Camera
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input class="form-check-input" type="radio" name="videoType" id="videoType-screen" value="screen">
+                                Screen
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="camera-name">Name of source</label>
+                        <input id="camera-name" class="camera form-control" type="text" placeholder="Add a name for this stream">
+                    </div>
+                    <div id="select-camera">
+                        <div class="form-group">
+                            <label for="camera-list">Choose camera</label>
+                            <select id="camera-list" class="camera form-control"></select>
+                        </div>
+                        <div class="form-group">
+                            <button type="button" id="start-camera" class="btn btn-outline-primary btn-block start-camera camera" disabled="disabled">Start Video</button>
+                        </div>
+                    </div>
+                    <div id="select-screen" class="form-group">
+                        <button id="chrome-ext-install" type="button" class="btn btn-outline-secondary btn-block">Install Chrome Extension</button>
+                        <button id="share-screen" type="button" class="btn btn-outline-primary btn-block invisible">Share screen</button>
+                    </div>
+                    <div class="form-group">
+                        <button type="button" class="btn btn-primary btn-block" id="publish" disabled="disabled">Publish</button>
+                    </div>
+                    <hr>
+                    <div class="form-group">
+                        <label for="share-url">Join this URL to publish another video source:</label>
+                        <input id="share-url" type="text" class="form-control" readonly>
+                    </div>
+                </form>
+            </div>
+            <div class="col-3">
+                <h2>Your view</h2>
+                <div id="camera-view" class="camera-view">
+                    <h3>Camera</h3>
+                </div>
+                <div id="screen-view" class="camera-view">
+                    <h3>Screen</h3>
+                </div>
+            </div>
+            <div class="col-6">
+                <h2>Other video sources</h2>
+                <div id="other-sources"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/vendor/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+    <script src="/js/student.js"></script>
+</body>
+
+</html>

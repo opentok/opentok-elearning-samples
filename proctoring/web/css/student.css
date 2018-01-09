@@ -1,0 +1,26 @@
+.h2, h2 {
+    font-size: 1.5rem;
+}
+.h3, h3 {
+    font-size: 1.25rem;
+}
+#publish {
+    display: none;
+}
+button, .btn {
+    cursor: pointer;
+}
+button:disabled, .btn:disabled {
+    cursor: not-allowed;
+}
+.camera-view {
+    height: 240px;
+}
+#other-sources {
+    display: flex;
+    flex-flow: row wrap;
+}
+#other-sources > div {
+    height: 240px;
+    width: 320px;
+}

@@ -1,0 +1,102 @@
+#students > div.zoomed {
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: #fff;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+#students > div.zoomed > div {
+    width: 50vw;
+    height: 50vh;
+    position: relative;
+}
+#students > div.zoomed > div:fullscreen {
+    width: 90%;
+    height: 100%;
+}
+#students > div.zoomed > div:-webkit-full-screen {
+    width: 90%;
+    height: 100%;
+}
+#students > div.zoomed > div:-moz-full-screen {
+    width: 90%;
+    height: 100%;
+}
+#students > div.zoomed > div:-ms-fullscreen {
+    width: 90%;
+    height: 100%;
+}
+.action-buttons {
+    display: none;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 5%;
+    left: 0;
+    z-index: 11;
+}
+.action-buttons .btn {
+    margin-left: 4px;
+    margin-right: 4px;
+}
+.stream {
+    height: 240px;
+}
+.zoomed .stream {
+    height: 40vh;
+}
+div.zoomed .action-buttons {
+    display: block;
+}
+.action-buttons button {
+    display: inline-block;
+    cursor: pointer;
+}
+.fullscreen {
+    display: none;
+}
+#students > div.zoomed .fullscreen {
+    display: inline-block;
+}
+#students > div.zoomed :fullscreen .fullscreen {
+    display: none;
+}
+#students > div.zoomed :-moz-full-screen .fullscreen {
+    display: none;
+}
+#students > div.zoomed :-webkit-full-screen .fullscreen {
+    display: none;
+}
+#students > div.zoomed :-ms-fullscreen .fullscreen {
+    display: none;
+}
+button.zoom {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+button.zoomed {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 12;
+    margin-left: -50px;
+    width: 100px;
+    cursor: pointer;
+}
+button:disabled, .btn:disabled {
+    cursor: not-allowed;
+}
