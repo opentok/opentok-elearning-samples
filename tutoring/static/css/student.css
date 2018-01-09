@@ -1,0 +1,116 @@
+#self-view {
+    height: 180px;
+    border-radius: 5%;
+    overflow: hidden;
+    position: relative;
+}
+#self-view .badge {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    z-index: 2;
+    display: none;
+}
+.camera-view {
+    border-radius: 10px;
+    overflow: hidden;
+}
+#streams {
+    height: 85vh;
+    max-height: 90vh;
+    position: relative;
+}
+.stream {
+    transition: top, left 0.5s ease-in;
+    width: 0;
+    height: 0;
+    position: relative;
+    z-index: 1;
+    display: none;
+}
+.stream.has-stream {
+    display: block;
+}
+
+/* Teacher cam only */
+.hasTeacherCamera #teacher-camera {
+    height: 100%;
+    width: 100%;
+}
+
+/* Teacher screen only */
+.hasTeacherScreen #teacher-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+/* Guest student only */
+.hasStudent #student-stage {
+    width: 100%;
+    height: 100%;
+}
+
+/* Teacher cam + screen */
+.hasTeacherCamera.hasTeacherScreen #teacher-camera {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 200px;
+    height: 150px;
+    z-index: 2;
+}
+.hasTeacherCamera.hasTeacherScreen #teacher-screen {
+    width: 100%;
+    height: 100%;
+}
+
+/* Guest student + Teacher cam */
+.hasTeacherCamera.hasStudent #teacher-camera,
+.hasTeacherCamera.hasStudent #student-stage {
+    width: 50%;
+    height: 360px;
+    margin: 0;
+    padding: 0;
+    float: left;
+}
+.hasTeacherCamera.hasStudent #teacher-camera {
+    border-radius: 10px 0 0 10px;
+}
+.hasTeacherCamera.hasStudent #student-stage {
+    border-radius: 0 10px 10px 0;
+}
+
+/* Guest student + Teacher cam + Teacher screen */
+.hasTeacherCamera.hasTeacherScreen.hasStudent #teacher-camera {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    width: 200px;
+    height: 150px;
+    z-index: 2;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.hasTeacherCamera.hasTeacherScreen.hasStudent #student-stage {
+    position: absolute;
+    bottom: 10px;
+    left: 20px;
+    width: 200px;
+    height: 150px;
+    z-index: 2;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.hasTeacherCamera.hasTeacherScreen.hasStudent #teacher-screen {
+    width: 100%;
+    height: 100%;
+    display: block;
+    float: none;
+    clear: both;
+    margin: 0 auto;
+    border-radius: 5px;
+    overflow: hidden;
+    z-index: 1;
+}

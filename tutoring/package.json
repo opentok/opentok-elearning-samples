@@ -1,0 +1,39 @@
+{
+  "name": "opentok-lms-demo-tutoring",
+  "version": "0.0.1-dev",
+  "description": "OpenTok demo for a tutoring setup",
+  "private": true,
+  "scripts": {
+    "start": "node server",
+    "test": "eslint .",
+    "certs": "openssl req -newkey rsa:2048 -nodes -keyout key.pem -x509 -days 365 -out cert.pem"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kaustavdm/opentok-lms-demos.git"
+  },
+  "keywords": [
+    "opentok",
+    "lms",
+    "demo"
+  ],
+  "author": "Kaustav Das Modak <kaustav.dasmodak@yahoo.co.in>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kaustavdm/opentok-lms-demos/issues"
+  },
+  "homepage": "https://github.com/kaustavdm/opentok-lms-demos#readme",
+  "devDependencies": {
+    "eslint": "^4.6.1",
+    "eslint-config-standard": "^10.2.1",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-node": "^5.1.1",
+    "eslint-plugin-promise": "^3.5.0",
+    "eslint-plugin-standard": "^3.0.1"
+  },
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "opentok": "^2.6.0"
+  }
+}

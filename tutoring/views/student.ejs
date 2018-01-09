@@ -1,0 +1,78 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Student - Room
+    <%= room.roomId %>
+  </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+    crossorigin="anonymous">
+  <link href="/css/app.css" rel="stylesheet" type="text/css">
+  <link href="/css/student.css" rel="stylesheet" type="text/css">
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/fbjkpogjjhklbffmfooofjgablhmcnhn">
+</head>
+
+<body>
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+      <a class="navbar-brand" href="/student/<%= room.roomId %>">Student</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/teacher/<%= room.roomId %>">Join as teacher</a>
+          </li>
+        </ul>
+        <a href="/" class="btn btn-outline-secondary">Exit</a>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="col">
+        <form id="join-form" class="form-inline">
+          <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+            <div class="input-group-addon">Name</div>
+            <input id="user-name" type="text" class="form-control" placeholder="Your name here" autofocus>
+          </div>
+          <button id="join-room" type="submit" class="btn btn-primary">Join Classroom</button>
+        </form>
+      </div>
+    </div>
+
+    <div id="controls" class="row justify-content-center">
+      <div class="col-2">
+          <div id="self-view" class="mb-1">
+            <span class="badge badge-success">On stage</span>
+          </div>
+          <div class="mb-2 mt-2"><img src="/dummy-chatbox.png" alt="Chatbox"></div>
+          <div class="mb-2 mt-2"><span id="elapsed-time"></span></div>
+          <div class="mb-1">
+            <a href="/breakout/<%= room.roomId %>" class="btn btn-outline-primary btn-block">Breakout</a>
+          </div>
+      </div>
+      <div id="streams" class="col-10">
+        <div id="teacher-camera" class="camera-view stream"></div>
+        <div id="student-stage" class="camera-view stream"></div>
+        <div id="teacher-screen" class="screen-view stream"></div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+    var room = JSON.parse('<%- JSON.stringify(room) %>')
+  </script>
+  <script src="/vendor/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1"
+    crossorigin="anonymous"></script>
+  <script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+  <script src="/js/student.js"></script>
+</body>

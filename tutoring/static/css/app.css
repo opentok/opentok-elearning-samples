@@ -1,0 +1,18 @@
+.h2, h2 {
+    font-size: 1.3rem;
+}
+.h3, h3 {
+    font-size: 1.2rem;
+}
+button, .btn {
+    cursor: pointer;
+}
+.btn.disabled {
+    cursor: default;
+}
+button:disabled, .btn:disabled {
+    cursor: not-allowed;
+}
+img {
+    max-width: 100%;
+}
