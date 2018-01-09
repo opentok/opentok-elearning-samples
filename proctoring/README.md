@@ -2,7 +2,7 @@
 
 A simple OpenTok demo showing a proctoring setup where each participant publishes multiple video feeds simultaneously and proctors can zoom in on student views.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/kaustavdm/opentok-lms-demos/tree/proctoring)
+[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/opentok/opentok-elearning-samples/tree/master/proctoring)
 
 ## Features
 
