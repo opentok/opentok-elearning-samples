@@ -2,8 +2,6 @@
 
 A simple OpenTok demo showing a tutoring setup where 1 teacher is connected to N students in a classroom. Students see only the teacher. Teacher can bring any student on the "stage" so that other students see and hear that student. Students also have a breakout room where they can discuss among each other.
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/opentok/opentok-elearning-samples/tree/master/tutoring)
-
 ## Features
 
 ### Roles
