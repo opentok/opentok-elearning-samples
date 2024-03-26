@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "ejs": "^2.5.7",
-    "express": "^4.15.4",
+    "express": "^4.19.2",
     "opentok": "^2.6.2"
   }
 }
